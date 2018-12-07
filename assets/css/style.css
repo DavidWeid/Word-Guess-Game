@@ -1,0 +1,19 @@
+.invisible {
+
+    opacity: 0;
+
+}
+
+.visible {
+
+    opacity: 1;
+
+}
+
+#current-word {
+
+    padding: 5px;
+    width: 900px;
+    font-size: 86px;
+
+}
