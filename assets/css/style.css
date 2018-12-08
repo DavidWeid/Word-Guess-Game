@@ -1,19 +1,33 @@
-.invisible {
-
-    opacity: 0;
-
+html,
+body {
+    font-family: 'Bad Script', 'Marck Script', 'Tangerine', cursive, sans-serif;
+    font-size: 18px;
 }
 
-.visible {
+body {
+    background-image: url("../images/fresh-snow.png");
+}
 
-    opacity: 1;
+.redText {
+    color: crimson;
+}
 
+.largerFont {
+    font-size: 64px;
+}
+
+.mediumFont {
+    font-size: 40px;
+}
+
+#game {
+    height: 100%;
+}
+
+#letters-guessed {
+    height: 65px;
 }
 
 #current-word {
-
-    padding: 5px;
-    width: 900px;
-    font-size: 86px;
-
+    height: 128px;
 }

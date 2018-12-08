@@ -77,7 +77,7 @@ function renderWord() {
 
 function updateLetters() {
 
-    document.querySelector("#letters-guessed").innerHTML = lettersGuessed;
+    document.querySelector("#letters-guessed").innerHTML = lettersGuessed.join(" ");
 
 }
 
@@ -101,6 +101,64 @@ function stopgame() {
 
     }
 
+}
+
+function changeBackground() {
+
+    if (wordsUsed === 1) {
+
+        document.body.style.backgroundImage = "url('assets/images/christmasTree.jpg')";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.color = "white";
+
+    } else if (wordsUsed === 2) {
+
+        document.body.style.backgroundImage = "url('assets/images/snowman.jpg')";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundPosition = "center";
+
+    } else if (wordsUsed === 3) {
+
+        document.body.style.backgroundImage = "url('assets/images/mistletoe.jpg')";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.color = "black";
+        document.getElementById("game-status").style.opacity = 0;
+
+    } else if (wordsUsed === 4) {
+
+        document.body.style.backgroundImage = "url('assets/images/eggnog.jpg')";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundPosition = "center";
+        document.getElementById("game-status").style.opacity = 1;
+        document.getElementsByClassName("redText").style.color = "black";
+
+    } else if (wordsused === 5) {
+
+
+
+    } else if (wordsused === 6) {
+
+
+
+    } else if (wordsused === 7) {
+
+
+
+    } else if (wordsused === 8) {
+
+
+
+    } else if (wordsused === 9) {
+
+
+
+    } else if (wordsused === 10) {
+
+
+        
+    }
 }
 
 
@@ -131,6 +189,7 @@ document.onkeyup = function (event) {
                     wins++;
                     updateWins();
                     lettersCorrect = [];
+                    changeBackground();
 
                 }
 
@@ -140,7 +199,7 @@ document.onkeyup = function (event) {
 
             }
 
-console.log(currentWord); console.log(lettersCorrect);
+            console.log(currentWord); console.log(lettersCorrect);
 
 
 
