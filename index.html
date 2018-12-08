@@ -14,68 +14,63 @@
 
 <body>
 
-    <div class="container-fluid text-center" id="game">
+    <div class="container-fluid text-center">
+
+        <div class="row p-5">
+
+            <div class="col pt-2">
+
+                <h1 class="font-weight-bold largerFont p-1"> Word Guess Game! </h1>
+                <h2 class="font-weight-bold mediumFont redText"> ~ Christmas Edition ~ </h2>
+
+            </div>
+
+        </div>
+
+        <div class="row pb-5">
+
+            <div class="col">
+
+                <h3 id="game-status"> Press a letter to guess! </h3>
+
+            </div>
+
+        </div>
+
         <div class="row">
 
-            <div class="col-4"></div>
+            <div class="col-6 p-5 border border-light">
 
-            <div class="col-4">
-
-                <div class="row">
-
-                    <div class="col mx-auto p-5">
-                        <h1 class="font-weight-bold largerFont"> Word Guess Game! </h1>
-                        <h2 class="font-weight-bold mediumFont redText"> ~ Christmas Edition ~ </h2>
-                    </div>
-
+                <div>
+                    <h3 class="mediumFont redText"> Wins: <span id="win-counter"> </span> </h3>
                 </div>
 
-
-                <div class="row">
-
-                    <div class="col mx-auto pt-5 p-2">
-                        <h3 id="game-status"> Press a letter to guess! </h3>
-                    </div>
-
+                <div>
+                    <h3> Number of guesses remaining: <span id="guesses-remaining"> 10 </span> </h3>
+                    <h3> Letters guessed: </h3>
+                    <h3> <span id="letters-guessed"> </span> <span class="invis">A</span></h3>
                 </div>
 
-                <div class="row">
-
-                    <div class="col mx-auto pt-5 p-2">
-                        <h3 class="mediumFont redText"> Wins: <span id="win-counter"> </span> </h3>
-                    </div>
-
-                </div>
-
-                <div class="row pb-5">
-
-                    <div class="col p-2">
-                        <h3 class="pb-3"> Number of guesses remaining: <span id="guesses-remaining"> 10 </span> </h3>
-                        <h3 class="pb-3"> Letters guessed: </h3>
-                        <h3> <span id="letters-guessed"> </span> </h3>
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="col p3">
-                        <h2 class="mediumFont redText"> Current word </h2>
-                        <span class="largerFont" id="current-word"> </span>
-                    </div>
-
+                <div>
+                    <h2 class="mediumFont redText"> Current word </h2>
+                    <span class="largerFont" id="current-word"> </span><span class="largerFont invis">A</span>
                 </div>
 
             </div>
 
-            <div class="col-4"></div>
+            <div class="col-6 p-5 border border-light image-div">
+
+                <img id="image" src="" alt="">
+
+            </div>
 
         </div>
+
     </div>
 
     <script src="assets/javascript/snow.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/javascript/game3.js"></script>
+    <script src="assets/javascript/game.js"></script>
 
 </body>
 

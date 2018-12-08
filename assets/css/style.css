@@ -20,14 +20,29 @@ body {
     font-size: 40px;
 }
 
-#game {
-    height: 100%;
-}
-
 #letters-guessed {
     height: 65px;
 }
 
 #current-word {
     height: 128px;
+}
+
+.invis {
+    opacity: 0;
+}
+
+.image-div {
+    position: relative;
+    overflow: hidden;
+}
+
+#image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+    margin: auto;
+    height: 98%;
+    justify-content: center;
 }
