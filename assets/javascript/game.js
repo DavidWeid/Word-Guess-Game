@@ -25,6 +25,9 @@ var currentWord = words[wordIndex];
 var wordsUsed = 0;
 var wordDisplay = [];
 
+// This variable is for the music to play only once!
+var totalKeyPress = 0;
+
 // FUNCTIONS //
 
 function checkPrint() {
@@ -62,7 +65,8 @@ function renderWord() {
         currentWord = words[wordIndex];
         guessesRemaining = 10;
         lettersGuessed = [];
-        wordDisplay = [];
+        wordDisplay = ["_ ".repeat(currentWord.length)];
+        // wordDisplay = [];
         document.querySelector("#current-word").innerHTML = wordDisplay.join(" ");
 
         // If wordsUsed = total words, render end-game screen
@@ -148,6 +152,27 @@ function changeBackground() {
     }
 }
 
+function playMusic() {
+
+    // Play music on first key press and ONLY once
+    if (totalKeyPress === 1) {
+
+    var songs = ["assets/music/carolOfTheBells.mp3", "assets/music/celticChristmas.mp3", "assets/music/letItSnow.mp3", "assets/music/weWishYouAMerryChristmas.mp3"];
+
+    var randomSongIndex = Math.floor(Math.random() * songs.length);
+    console.log(randomSongIndex)
+    var audioElement = document.createElement("audio");
+    audioElement.setAttribute("src", songs[randomSongIndex]);
+    audioElement.play();
+
+    } else {
+
+        return;
+
+    }
+
+}
+
 
 renderWord();
 checkPrint();
@@ -156,6 +181,12 @@ document.onkeyup = function (event) {
 
     // User chooses a letter from the alphabet array
     if (alphabet.indexOf(event.key) !== -1) {
+
+        // Makes totalKeyPress go from 0 to 1 once, allowing music to play ONLY once
+        totalKeyPress++
+
+        // Play Music
+        playMusic();
 
         // User guess is in currentWord array (index !== -1)
         if (currentWord.indexOf(event.key) !== -1) {
