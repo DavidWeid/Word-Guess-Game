@@ -8,10 +8,10 @@ This game is an example of the "Hangman", created with only HTML and Javascript.
 2. The player starts the game by pressing a letter of the alphabet (a-z). No other keys do anything.
 
 3. Once a letter is pressed
-  3. a. Music plays. The music is one song and plays until it is over. The song is chosen from a list randomly, but only one song plays.
-  3. b. If the letter is in the current word, it is displayed in the "current word" field.
-  3. c. If the letter is not in the current word, it is displayed in the "Letters guessed" field. Guesses remaining decreases by one.
-  3. d. Repeated letter guesses don't do anything (won't change guesses remaining, won't add to letters guessed >1 time, won't add to current word >1 time).
+  3. Music plays. The music is one song and plays until it is over. The song is chosen from a list randomly, but only one song plays.
+  3. If the letter is in the current word, it is displayed in the "current word" field.
+  3. If the letter is not in the current word, it is displayed in the "Letters guessed" field. Guesses remaining decreases by one.
+  3. Repeated letter guesses don't do anything (won't change guesses remaining, won't add to letters guessed >1 time, won't add to current word >1 time).
   
 4. Once the word is guessed OR the player runs out of guesses (guesses remaining <1)
 a. The "Current word" field gets replaced by new blanks corresponding to the next word.
